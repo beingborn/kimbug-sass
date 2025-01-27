@@ -4,11 +4,17 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "node-sass" : "node-sass",
-    "sass" : "node-sass -wr styles/main.scss style.css"
+    "node-sass": "node-sass",
+    "sass": "node-sass -wr styles/main.scss style.css"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "sass-lint": "^1.13.1"
+  },
+  "dependencies": {
+    "node-sass": "^9.0.0"
+  }
 }

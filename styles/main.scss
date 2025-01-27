@@ -1,8 +1,19 @@
+* {
+  font-family: 'Noto Sans KR', serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
 p {
-    color: red;
-    display: block;
+  display: block;
+  color: red;
 }
 
 legend {
-    text-indent: -9999em;
+  text-indent: -9999em;
+}
+
+h2 {
+  font-size: 32px;
+  height: 20px;
 }
