@@ -1,21 +1,7 @@
+// 변수 최상위 선언
+@import './constants/colors';
+@import './constants/typography';
+
 @import './base/fonts';
-
-* {
-  font-family: 'Noto Sans KR', serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-}
-
-p {
-  display: block;
-  color: red;
-}
-
-legend {
-  text-indent: -9999em;
-}
-
-h2 {
-  font-size: 32px;
-  height: 20px;
-}
+@import './base/nomalize';
+@import './base/reset';
