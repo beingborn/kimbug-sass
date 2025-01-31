@@ -6,6 +6,7 @@
 @import './base/fonts';
 @import './base/nomalize';
 @import './base/reset';
+@import './base/globals';
 
 @import './mixins/text-style';
 @import './mixins/responsive';
@@ -16,6 +17,8 @@
 @import './modules/avatars';
 @import './modules/star-ratings';
 @import './modules/buttons';
+@import './modules/forms';
+@import './modules/pagination';
 
 @import './modules/prices';
 @import './layout/grids';

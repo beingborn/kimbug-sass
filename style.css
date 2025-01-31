@@ -417,6 +417,47 @@ ul,
 ol {
   list-style: none; }
 
+@media screen and (min-width: 768px) {
+  .section {
+    font-size: 10px;
+    color: red; } }
+
+.visually-hidden {
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important; }
+  .visually-hidden:not(caption) {
+    position: absolute !important; }
+
+@media screen and (min-width: 768px) {
+  .sm-only {
+    display: none !important; } }
+
+@media screen and (max-width: 767px) {
+  .md-only {
+    display: none !important; } }
+
+@media screen and (min-width: 1024px) {
+  .md-only {
+    display: none !important; } }
+
+@media screen and (max-width: 1023px) {
+  .lg-only {
+    display: none !important; } }
+
+@media screen and (max-width: 767px) {
+  .sm-hidden {
+    display: none !important; } }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .md-hidden {
+    display: none !important; } }
+
 p {
   font-size: 24px;
   line-height: 34px;
@@ -553,6 +594,116 @@ p {
 
 .btn-55 {
   height: 32px; }
+
+.form-select,
+.form-input {
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  color: #3f4150;
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 0 16px;
+  background-color: #fff;
+  border: 1px solid #e0e2e7;
+  border-radius: 4px;
+  appearance: none;
+  transition: background-color 200ms ease-in-out; }
+  .form-select::placeholder,
+  .form-input::placeholder {
+    color: #b2b3b9; }
+  .form-select:not(:disabled):hover,
+  .form-input:not(:disabled):hover {
+    background-color: #f7f8fa; }
+  .form-select:disabled,
+  .form-input:disabled {
+    cursor: not-allowed;
+    opacity: 0.4; }
+
+.select-group {
+  position: relative; }
+  .select-group.is-active .form-select {
+    border-color: #3da5f5; }
+  .select-group.is-active .ic-caret {
+    color: #3da5f5; }
+  .select-group .form-select {
+    padding-right: 40px;
+    text-overflow: ellipsis; }
+  .select-group .ic-caret {
+    font-size: 24px;
+    color: #b2b3b9;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 8px;
+    pointer-events: none; }
+
+.input-group {
+  position: relative; }
+  .input-group .form-input {
+    padding-left: 40px; }
+  .input-group .ic-search {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    font-size: 20px;
+    color: #8c8d96; }
+
+.pagination .page-control, .pagination .page-item a,
+.pagination .page-item button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  color: #3f4150;
+  height: 26px;
+  font-weight: 700;
+  background-color: #fff;
+  border-radius: 4px; }
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .pagination .page-control {
+    border: 1px solid #e0e2e7;
+    width: 26px; }
+    .pagination .page-control.page-prev {
+      margin-right: 24px; }
+      .pagination .page-control.page-prev .ic-chevron {
+        transform: rotate(90deg); }
+    .pagination .page-control.page-next {
+      margin-left: 24px; }
+      .pagination .page-control.page-next .ic-chevron {
+        transform: rotate(-90deg); }
+    .pagination .page-control:hover {
+      opacity: 0.4; }
+    .pagination .page-control .ic-chevron {
+      font-size: 20px; }
+  .pagination .page-list {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .pagination .page-item + .page-item {
+    margin-left: 4px; }
+  .pagination .page-item.is-active a,
+  .pagination .page-item.is-active button {
+    color: #fff;
+    background-color: #3da5f5; }
+    .pagination .page-item.is-active a:hover,
+    .pagination .page-item.is-active button:hover {
+      color: #fff; }
+  .pagination .page-item a,
+  .pagination .page-item button {
+    min-width: 26px;
+    padding: 0 4px; }
+    .pagination .page-item a:hover,
+    .pagination .page-item button:hover {
+      color: #3da5f5; }
 
 .price-16,
 .price-20,
