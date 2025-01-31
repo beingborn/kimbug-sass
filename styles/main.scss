@@ -1,9 +1,19 @@
 // 변수 최상위 선언
 @import './constants/colors';
 @import './constants/typography';
+@import './constants/breakpoints';
 
 @import './base/fonts';
 @import './base/nomalize';
 @import './base/reset';
+
+@import './mixins/text-style';
+@import './mixins/responsive';
+@import './mixins/positions';
+@import './mixins/flexbox';
+
+@import './modules/tags';
+@import './modules/avatars';
+@import './modules/star-ratings';
 
 @import './layout/grids';
