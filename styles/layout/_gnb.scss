@@ -2,18 +2,6 @@
   position: relative;
   border-bottom: 1px solid $border;
 
-  &-icon-button {
-    @include flexbox;
-    width: 32px;
-    height: 32px;
-    font-size: 24px;
-    color: $secondary;
-  }
-
-  &-menu-button {
-    color: $blue;
-  }
-
   &-right {
     .button-group {
       @include flexbox(end);
@@ -24,7 +12,7 @@
         }
       }
     }
-    .gnb-search-button {
+    .gnb-icon-button.is-search {
       margin-right: 4px;
     }
   }

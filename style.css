@@ -784,6 +784,22 @@ p {
   color: #3f4150;
   font-weight: 700; }
 
+.gnb-icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  font-size: 24px;
+  color: #8c8d96;
+  transition: color 200ms ease-in-out; }
+  .gnb-icon-button.is-menu {
+    color: #3da5f5; }
+    .gnb-icon-button.is-menu:active {
+      color: #3186c4; }
+  .gnb-icon-button:active {
+    color: #3f4150; }
+
 /**
 * MOBILE (< 768px)----------------------------
 * fixture                              sm
@@ -886,23 +902,13 @@ p {
 .gnb {
   position: relative;
   border-bottom: 1px solid #e0e2e7; }
-  .gnb-icon-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    font-size: 24px;
-    color: #8c8d96; }
-  .gnb-menu-button {
-    color: #3da5f5; }
   .gnb-right .button-group {
     display: flex;
     align-items: center;
     justify-content: flex-end; }
     .gnb-right .button-group .gnb-icon-button + .gnb-icon-button {
       margin-left: 8px; }
-  .gnb-right .gnb-search-button {
+  .gnb-right .gnb-icon-button.is-search {
     margin-right: 4px; }
   .gnb-wrapper {
     height: 50px;
