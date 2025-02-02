@@ -1,0 +1,94 @@
+.gnb {
+  position: relative;
+  border-bottom: 1px solid $border;
+
+  &-icon-button {
+    @include flexbox;
+    width: 32px;
+    height: 32px;
+    font-size: 24px;
+    color: $secondary;
+  }
+
+  &-menu-button {
+    color: $blue;
+  }
+
+  &-right {
+    .button-group {
+      @include flexbox(end);
+
+      .gnb-icon-button {
+        & + .gnb-icon-button {
+          margin-left: 8px;
+        }
+      }
+    }
+    .gnb-search-button {
+      margin-right: 4px;
+    }
+  }
+
+  &-wrapper {
+    height: 50px;
+    @include flexbox(between);
+  }
+
+  .logo {
+    @include pos-center;
+
+    a {
+      display: block;
+    }
+
+    img {
+      display: block;
+      width: auto;
+      height: 20px;
+    }
+  }
+
+  @include responsive(T) {
+    &-left {
+      @include flexbox(start);
+    }
+
+    &-right {
+      @include flexbox(end);
+    }
+
+    &-wrapper {
+      height: 80px;
+    }
+
+    .logo {
+      position: static;
+      margin-right: 32px;
+      transform: none;
+
+      img {
+        height: 24px;
+      }
+    }
+
+    .btn-primary {
+      width: 88px;
+      i {
+        margin-left: 4px;
+      }
+    }
+  }
+
+  @include responsive(D) {
+    &-right {
+      .input-group {
+        width: 264px;
+        margin-right: 24px;
+      }
+
+      .button-group {
+        margin-right: 24px;
+      }
+    }
+  }
+}
