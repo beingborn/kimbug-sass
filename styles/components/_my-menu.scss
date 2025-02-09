@@ -1,17 +1,19 @@
 .my-menu {
+  $button-size: 32px;
   $tooltip-size: 12px;
   position: relative;
 
   &-buttons {
-    width: 32px;
-    height: 32px;
+    width: $button-size;
+    height: $button-size;
     border: 3px solid $white;
     overflow: hidden;
     border-radius: 50%;
     transition: border 200ms ease-in-out;
 
-    &:hover {
-      border: 3px solid $blue;
+    &:hover,
+    &.is-active {
+      border-color: $blue;
     }
 
     img {
@@ -25,6 +27,7 @@
   &-content {
     @include pos-center-x;
     border-radius: 4px;
+    top: $button-size + $tooltip-size + 8px;
     box-shadow: $dropdown-shadow;
 
     &::before,

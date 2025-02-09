@@ -845,8 +845,8 @@ p {
     overflow: hidden;
     border-radius: 50%;
     transition: border 200ms ease-in-out; }
-    .my-menu-buttons:hover {
-      border: 3px solid #3da5f5; }
+    .my-menu-buttons:hover, .my-menu-buttons.is-active {
+      border-color: #3da5f5; }
     .my-menu-buttons img {
       display: block;
       width: 100%;
@@ -857,6 +857,7 @@ p {
     left: 50%;
     transform: translateX(-50%);
     border-radius: 4px;
+    top: 52px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); }
     .my-menu-content::before, .my-menu-content::after {
       position: absolute;
