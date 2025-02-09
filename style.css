@@ -1071,4 +1071,9 @@ p {
     .gnb-right .button-group {
       margin-right: 24px; } }
 
+.sidebar {
+  width: 240px;
+  padding: 32px 20px;
+  background-color: #fff; }
+
 /*# sourceMappingURL=style.css.map */
