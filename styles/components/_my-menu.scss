@@ -4,6 +4,7 @@
   position: relative;
 
   &-buttons {
+    @include background('./assets/images/img-user-default.png');
     width: $button-size;
     height: $button-size;
     border: 3px solid $white;
