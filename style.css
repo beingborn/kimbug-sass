@@ -911,8 +911,23 @@ p {
 .drawer-menu.is-active .drawer-menu-button {
   color: #3da5f5; }
 
+.drawer-menu.is-open.is-community .drawer-menu-content {
+  max-height: 308px; }
+
+.drawer-menu.is-open.is-store .drawer-menu-content {
+  max-height: 344px; }
+
+.drawer-menu.is-open.is-expert .drawer-menu-content {
+  max-height: 92px; }
+
+.drawer-menu.is-open .drawer-menu-button .ic-chevron {
+  transform: translateY(-50%) rotate(180deg); }
+
 .drawer-menu.is-open .drawer-menu-content {
-  display: block; }
+  max-height: 500px; }
+
+.drawer-menu.is-open .drawer-menu-list {
+  padding-bottom: 20px; }
 
 .drawer-menu-button {
   font-size: 18px;
@@ -925,7 +940,8 @@ p {
   position: relative;
   font-weight: 700;
   width: 100%;
-  height: 54px; }
+  height: 54px;
+  transition: color 200ms ease-in-out; }
   .drawer-menu-button i:first-child {
     position: relative;
     top: 1px;
@@ -938,10 +954,16 @@ p {
     transform: translateY(-50%);
     right: 8px;
     font-size: 16px;
-    color: #3f4150; }
+    color: #3f4150;
+    transition: transform 200ms ease-in-out; }
 
 .drawer-menu-content {
-  display: none; }
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 200ms ease-in-out; }
+
+.drawer-menu-item.is-active a {
+  color: #3da5f5; }
 
 .drawer-menu-item a {
   display: flex;
@@ -1133,9 +1155,18 @@ p {
       margin-right: 24px; } }
 
 .sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  z-index: 20;
+  overflow: scroll;
   width: 240px;
   padding: 32px 20px;
-  background-color: #fff; }
+  background-color: #fff;
+  overscroll-behavior: contain; }
+  .sidebar::-webkit-scrollbar {
+    display: none; }
   .sidebar-header {
     padding: 0 12px; }
     .sidebar-header .logo {
@@ -1176,5 +1207,33 @@ p {
     justify-content: space-between; }
     .sidebar-auth a {
       width: 84px; }
+  .sidebar-nav .drawer-menu {
+    border-top: 1px solid #e0e2e7; }
+    .sidebar-nav .drawer-menu.is-expert {
+      border-bottom: 1px solid #e0e2e7; }
+  .sidebar-user-menu {
+    margin-top: 16px; }
+    .sidebar-user-menu .user-menu-item a {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: -0.01em;
+      color: #3f4150;
+      width: 100%;
+      height: 36px;
+      padding: 0 12px; }
+      .sidebar-user-menu .user-menu-item a:active {
+        color: #3da5f5; }
+
+.overlay {
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background-color: rgba(63, 65, 80, 0.5);
+  position: fixed;
+  left: 0;
+  top: 0; }
 
 /*# sourceMappingURL=style.css.map */
