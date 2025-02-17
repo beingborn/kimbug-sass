@@ -1164,7 +1164,11 @@ p {
   width: 240px;
   padding: 32px 20px;
   background-color: #fff;
-  overscroll-behavior: contain; }
+  overscroll-behavior: contain;
+  transform: translate3d(-240px, 0, 0);
+  transition: transform 300ms ease-in-out; }
+  .sidebar.is-active {
+    transform: translate3d(0, 0, 0); }
   .sidebar::-webkit-scrollbar {
     display: none; }
   .sidebar-header {
@@ -1234,6 +1238,12 @@ p {
   background-color: rgba(63, 65, 80, 0.5);
   position: fixed;
   left: 0;
-  top: 0; }
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 300ms ease-in-out, visibility 300ms ease-in-out; }
+  .overlay.is-active {
+    opacity: 1;
+    visibility: visible; }
 
 /*# sourceMappingURL=style.css.map */
