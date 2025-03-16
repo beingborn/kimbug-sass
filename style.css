@@ -1213,11 +1213,27 @@ p {
       .gnb .btn-primary i {
         margin-left: 4px; } }
   @media screen and (min-width: 1024px) {
-    .gnb-right .input-group {
+    .gnb-search {
       width: 264px;
+      position: relative;
       margin-right: 24px; }
-    .gnb-right .button-group {
-      margin-right: 24px; } }
+      .gnb-search .input-group {
+        width: 100%; }
+      .gnb-search .search-history {
+        position: absolute;
+        display: none;
+        left: 0;
+        top: calc(100% + 8px);
+        width: 100%;
+        background-color: #fff;
+        padding: 16px 8px 8px;
+        border-radius: 4px;
+        border: 1px solid #e0e2e7;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); }
+        .gnb-search .search-history.is-active {
+          display: block; }
+        .gnb-search .search-history-header {
+          padding: 0 8px; } }
 
 .sidebar {
   position: fixed;
