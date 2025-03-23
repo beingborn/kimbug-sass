@@ -1354,4 +1354,23 @@ p {
       flex-grow: 0;
       margin-left: 0; }
 
+.lnb {
+  overflow: auto;
+  border-bottom: 1px solid #e0e2e7; }
+  .lnb::-webkit-scrollbar {
+    display: none; }
+  .lnb-list {
+    display: flex; }
+  .lnb-item {
+    white-space: nowrap; }
+    .lnb-item.is-active a {
+      color: #3da5f5;
+      border-bottom: 2px solid #3da5f5; }
+    .lnb-item a {
+      display: block;
+      padding: 0 8px;
+      height: 40px;
+      align-content: center;
+      font-weight: 700; }
+
 /*# sourceMappingURL=style.css.map */
