@@ -1360,9 +1360,12 @@ p {
   .lnb::-webkit-scrollbar {
     display: none; }
   .lnb-list {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    justify-content: flex-start; }
+    justify-content: flex-start;
+    white-space: nowrap;
+    position: relative;
+    left: -8px; }
   .lnb-item {
     flex-shrink: 0;
     white-space: nowrap; }
@@ -1375,11 +1378,12 @@ p {
       padding: 0 8px;
       height: 40px;
       align-content: center;
-      font-weight: 700; }
+      font-weight: 700;
+      border-bottom: 2px solid transparent; }
     .lnb-item .ic-new {
       color: #f86d7d; }
     .lnb-item.is-active a {
       color: #3da5f5;
-      border-bottom: 2px solid #3da5f5; }
+      border-color: #3da5f5; }
 
 /*# sourceMappingURL=style.css.map */

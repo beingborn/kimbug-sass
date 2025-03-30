@@ -7,7 +7,16 @@
     }
 
     &-list {
-        @include flexbox(start);
+        // @include flexbox(start);
+        // width: max-content;
+
+        // %는 원래 부모의 컨텐츠 박스에 영향을 받으나.
+        // max-content => 자신이 가질 수 있는 가장 큰 사이즈를 기준 (자식)
+
+        @include inline-flexbox(start);
+        white-space: nowrap;
+        position: relative;
+        left: -8px;
     }
 
     &-item {
@@ -21,6 +30,7 @@
             height: 40px;
             align-content: center;
             font-weight: 700;
+            border-bottom: 2px solid transparent;
         }
 
         .ic-new {
@@ -30,7 +40,7 @@
         &.is-active {
             a {
                 color: $blue;
-                border-bottom: 2px solid $blue;
+                border-color: $blue;
             }
         }
     }
