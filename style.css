@@ -1360,17 +1360,26 @@ p {
   .lnb::-webkit-scrollbar {
     display: none; }
   .lnb-list {
-    display: flex; }
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; }
   .lnb-item {
+    flex-shrink: 0;
     white-space: nowrap; }
-    .lnb-item.is-active a {
-      color: #3da5f5;
-      border-bottom: 2px solid #3da5f5; }
     .lnb-item a {
+      font-size: 13px;
+      line-height: 20px;
+      letter-spacing: -0.01em;
+      color: #191a20;
       display: block;
       padding: 0 8px;
       height: 40px;
       align-content: center;
       font-weight: 700; }
+    .lnb-item .ic-new {
+      color: #f86d7d; }
+    .lnb-item.is-active a {
+      color: #3da5f5;
+      border-bottom: 2px solid #3da5f5; }
 
 /*# sourceMappingURL=style.css.map */
