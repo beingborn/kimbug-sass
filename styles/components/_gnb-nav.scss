@@ -1,24 +1,25 @@
 .gnb-nav {
-  $padding: 8px;
+    $padding: 8px;
 
-  &-list {
-    @include flexbox(start);
-    gap: 24px - ($padding * 2);
-    margin-left: -#{$padding};
-  }
+    &-list {
+        @include flexbox(start);
+        gap: 24px - ($padding * 2);
+        margin-left: -#{$padding};
+    }
 
-  &-item {
-    &:hover,
-    &.is-active {
-      a {
-        color: $blue;
-      }
+    &-item {
+        &:hover,
+        &.is-active {
+            a {
+                color: $blue;
+            }
+        }
+        a {
+            @include text-style(18, $primary);
+            font-weight: 700;
+            display: block;
+            padding: $padding;
+            white-space: nowrap;
+        }
     }
-    a {
-      @include text-style(18, $primary);
-      font-weight: 700;
-      display: block;
-      padding: $padding;
-    }
-  }
 }

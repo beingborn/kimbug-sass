@@ -798,7 +798,8 @@ p {
   color: #3f4150;
   font-weight: 700;
   display: block;
-  padding: 8px; }
+  padding: 8px;
+  white-space: nowrap; }
 
 .gnb-icon-button {
   display: flex;
@@ -1252,7 +1253,7 @@ p {
   .sidebar.is-active {
     transform: translate3d(0, 0, 0); }
   .sidebar::-webkit-scrollbar {
-    display: none; }
+    display: none !important; }
   .sidebar-header {
     padding: 0 12px; }
     .sidebar-header .logo {
@@ -1358,7 +1359,7 @@ p {
 .lnb {
   overflow-x: auto; }
   .lnb::-webkit-scrollbar {
-    display: none; }
+    display: none !important; }
   .lnb-list {
     display: inline-flex;
     align-items: center;
@@ -1366,8 +1367,7 @@ p {
     height: 40px;
     padding: 0 7px;
     margin-left: -15px;
-    white-space: nowrap;
-    border-bottom: 1px solid #e0e2e7; }
+    white-space: nowrap; }
   .lnb-item {
     flex-shrink: 0;
     white-space: nowrap; }
@@ -1382,8 +1382,24 @@ p {
       align-content: center;
       font-weight: 700;
       border-bottom: 2px solid transparent; }
+      .lnb-item a:hover {
+        color: #3da5f5; }
     .lnb-item.is-active a {
       color: #3da5f5;
       border-color: #3da5f5; }
+  @media screen and (min-width: 768px) {
+    .lnb {
+      height: 50px;
+      overflow-x: visible; }
+      .lnb-list {
+        height: auto;
+        padding: 0;
+        margin-left: 0;
+        border-bottom: 0; }
+      .lnb-item a {
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: -0.01em;
+        height: 50px; } }
 
 /*# sourceMappingURL=style.css.map */
