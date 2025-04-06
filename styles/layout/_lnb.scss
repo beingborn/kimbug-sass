@@ -1,6 +1,8 @@
 .lnb {
-    overflow: auto;
-    border-bottom: 1px solid $border;
+    $lnb-link-padding: 8px;
+    $grid-margin: $sm-margin + $gutter / 2;
+
+    overflow-x: auto;
 
     &::-webkit-scrollbar {
         display: none;
@@ -14,9 +16,11 @@
         // max-content => 자신이 가질 수 있는 가장 큰 사이즈를 기준 (자식)
 
         @include inline-flexbox(start);
+        height: 40px;
+        padding: 0 #{$grid-margin - $lnb-link-padding};
+        margin-left: -#{$grid-margin};
         white-space: nowrap;
-        position: relative;
-        left: -8px;
+        border-bottom: 1px solid $border;
     }
 
     &-item {
@@ -26,15 +30,11 @@
         a {
             @include text-style(13, $dark);
             display: block;
-            padding: 0 8px;
+            padding: 0 $lnb-link-padding;
             height: 40px;
             align-content: center;
             font-weight: 700;
             border-bottom: 2px solid transparent;
-        }
-
-        .ic-new {
-            color: $red;
         }
 
         &.is-active {
